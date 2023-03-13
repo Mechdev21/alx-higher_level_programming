@@ -2,12 +2,12 @@
 def element_at(my_list, idx):
     if idx < 0:
         return None
-    caount = len(my_list)
-    if idx > caount:
-        return None
     if my_list is not None:
+        length = len(my_list)
         i = 0
-        while i <= caount:
-            if idx == i:
+        if idx > length:
+            return None
+        while i <= length:
+            if i == idx:
                 return my_list[i]
             i += 1
