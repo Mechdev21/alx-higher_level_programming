@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+
+""" we introduce the concept of setters and getters in our class square"""
+
+
 class Square:
     """defines atype size"""
     def __init__(self, size=0):
