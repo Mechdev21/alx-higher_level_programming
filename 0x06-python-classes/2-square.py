@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+"""size must be an integer, otherwise raise TypeErro
+if size is less than 0, raise a ValueError"""
+
+
 class Square:
     """defines a type square """
     def __init__(self, size=0):
