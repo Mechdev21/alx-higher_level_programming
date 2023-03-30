@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+""" write a class square 
+Public instance method: def area(self): that returns the current square area"""
+
+
 class Square:
     """ defines a type square """
     def __init__(self, size=0):
