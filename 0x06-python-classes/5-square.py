@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+""" add a functionality thats lets us print a square in our class
+Public instance method: def my_print(self)"""
+
+
 class Square:
     """defines a type square"""
     def __init__(self, size=0):
@@ -14,7 +19,7 @@ class Square:
         else:
             for i in range(self.__size):
                 for j in range(self.__size):
-                    print("#", end = " ")
+                    print("#", end = "")
                 print()
     @property
     def size(self):
