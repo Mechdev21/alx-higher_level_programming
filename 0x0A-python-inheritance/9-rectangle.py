@@ -23,4 +23,6 @@ class Rectangle(BaseGeometry):
         return var
 
     def __str__(self):
+        """__str__ method for return the next string"""
+
         return f"[Rectangle] {self.__width}/{self.__height}"
