@@ -1,0 +1,79 @@
+The ``add_interger`` module
+===========================
+
+using ``add_interger``
+=====================
+
+This is a test file for add_interger that imports from add_interger
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Checking module Docstring
+
+    >>> c = __import__("0-add_integer").__doc__
+    >>> len(c) > 1
+    True
+
+Testing normal addition
+
+    >>> add_integer(5.0, 7)
+    12
+
+Testing for assigned number b = 98
+
+    >>> add_integer(9)
+    107
+
+Testing Empty args
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Testing String type args for a
+
+    >>> add_integer("ALX", 8)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Testing String type args for b
+
+    >>> add_integer(19, "ALX")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Testing float type args
+
+    >>> add_integer(17.8, 1)
+    18
+
+Testing more than two args
+
+    >>> add_integer(14, 3,1)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Testing String type args for b
+
+    >>> add_integer(20, "ALX")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Testing float  overflow
+
+    >>> add_integer(1, float('infin'))
+    Traceback (most recent call last):
+    ...
+    ValueError: could not convert string to float: 'infin'
+
+Testing Nan
+
+    >>> add_integer(1, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
