@@ -53,9 +53,9 @@ class Rectangle:
         total = ""
         for i in range(self.__height):
             for j in range(self.__width):
-                total += "#"
+                total += '#'
             if self.__width != 0 and i < (self.__height - 1):
-                total += "\n"
+                total += '\n'
         return total
 
     def __repr__(self):
