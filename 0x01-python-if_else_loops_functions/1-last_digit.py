@@ -5,7 +5,7 @@ if number < 0:
     number = number * -1
     last_digit = number % 10
     last_digit = last_digit * -1
-if number > 0:
+if number >= 0:
     last_digit = number % 10
 if last_digit > 5:
     print("Last digit of {} is {} and is\
