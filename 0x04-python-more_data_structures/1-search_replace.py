@@ -9,8 +9,9 @@
 def search_replace(my_list, search, replace):
     n = len(my_list)
     i = 0
+    new_list = my_list.copy()
     while i < n:
-        if my_list[i] == search:
-            my_list[i] = replace
+        if new_list[i] == search:
+            new_list[i] = replace
         i += 1
-    return my_list
+    return new_list
