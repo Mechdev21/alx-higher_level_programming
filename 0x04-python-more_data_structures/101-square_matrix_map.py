@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-
-# a function that:
-# squares the value of a matri
-
 def square_matrix_map(matrix=[]):
     return list(map(lambda x: list(map(lambda i: i ** 2, x)), matrix))
