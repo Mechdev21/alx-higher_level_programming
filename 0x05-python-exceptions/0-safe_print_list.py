@@ -11,6 +11,6 @@ def safe_print_list(my_list=[], x=0):
             n += 1
             x -= 1
     except IndexError:
-            print("This index is out of range")
+        print("This index is out of range")
     print()
     return n
