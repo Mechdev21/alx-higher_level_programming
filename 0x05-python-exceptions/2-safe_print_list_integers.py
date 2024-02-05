@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-
-# safe_print_list_integers: a function that:
-# prints the first x element of a list
-
 def safe_print_list_integers(my_list=[], x=0):
     n = 0
     i = 0
