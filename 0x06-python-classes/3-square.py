@@ -9,7 +9,7 @@ class Square:
         Args:
             size: a private instace attribute
         """
-        if  not isinstance(size, int):
+        if not isinstance(size, int):
             """checks to make sure size is an int"""
             raise TypeError("size must be an integer")
         if size < 0:
