@@ -1,79 +1,64 @@
-The ``add_interger`` module
-===========================
+==========================================
+this is a doctest of the ``add_integer``
+=========================================
 
-using ``add_interger``
-=====================
+This script is a test script with only one function
+``add_integer()``
 
-This is a test file for add_interger that imports from add_interger
+numbers
+=======
 
-    >>> add_integer = __import__("0-add_integer").add_integer
+``add_integer()`` returns an additon of two integers.
+...
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(9, 9)
+18
+>>> add_integer(0, 0)
+0
+>>> add_integer(0, -1)
+-1
 
-Checking module Docstring
+Testing float numbers
+...
+>>> add_integer(7.1, 5.0)
+12
+>>> add_integer(8.5, 0.9)
+8
 
-    >>> c = __import__("0-add_integer").__doc__
-    >>> len(c) > 1
-    True
+Testing if one args is given
+...
+>>> add_integer(0)
+98
 
-Testing normal addition
+Float NaN:
+...
+>>> add_integer(float('NaN'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
 
-    >>> add_integer(5.0, 7)
-    12
+String input:
+...
+>>> add_integer(4, "School")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 
-Testing for assigned number b = 98
+None input:
+...
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
 
-    >>> add_integer(9)
-    107
+Double negative float input:
+...
+>>> add_integer(-100.5, -10.8)
+-110
 
-Testing Empty args
-
-    >>> add_integer()
-    Traceback (most recent call last):
-    ...
-    TypeError: add_integer() missing 1 required positional argument: 'a'
-
-Testing String type args for a
-
-    >>> add_integer("ALX", 8)
-    Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
-
-Testing String type args for b
-
-    >>> add_integer(19, "ALX")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-Testing float type args
-
-    >>> add_integer(17.8, 1)
-    18
-
-Testing more than two args
-
-    >>> add_integer(14, 3,1)
-    Traceback (most recent call last):
-    ...
-    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
-
-Testing String type args for b
-
-    >>> add_integer(20, "ALX")
-    Traceback (most recent call last):
-    ...
-    TypeError: b must be an integer
-
-Testing float  overflow
-
-    >>> add_integer(1, float('infin'))
-    Traceback (most recent call last):
-    ...
-    ValueError: could not convert string to float: 'infin'
-
-Testing Nan
-
-    >>> add_integer(1, float('nan'))
-    Traceback (most recent call last):
-    ...
-    ValueError: cannot convert float NaN to integer
+Double string input:
+...
+>>> add_integer("holberton", "school")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
