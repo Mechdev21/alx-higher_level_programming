@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+""" This module contain one function that returns a
+list of attributes and method"""
 
-""" Returns the lists of attributes and method in object"""
 
 def lookup(obj):
-    """ fuction that returns attributes and method"""
-    return dir(obj)
+    """
+    A function that returns a list of attributes
+    and method
+    Args:
+        obj
+    Returns:
+        list of obj attributes and method
+    """
+    return (dir(obj))
