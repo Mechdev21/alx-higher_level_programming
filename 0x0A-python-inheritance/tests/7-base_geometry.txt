@@ -19,3 +19,13 @@ ValueError: last must be greater than 0
 Traceback (most recent call last):
 ...
 TypeError: hat must be an integer
+
+with 3 arguments
+>>> b_g.integer_validator("numbers", 0, 1)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+:: with infinite integer
+>>> b_g.integer_validator("infnumber", int('inf'))
+Traceback (most recent call last):
+ValueError: invalid literal for int() with base 10: 'inf'
