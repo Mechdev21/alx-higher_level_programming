@@ -1,0 +1,21 @@
+======================================================
+a script that test outr implementation of BaseGeometry
+======================================================
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> b_g = BaseGeometry()
+
+test basic function
+>>> b_g.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+>>> b_g.integer_validator("name", 12)
+>>> b_g.integer_validator("last", -14)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+>>> b_g.integer_validator("hat", "cap")
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
