@@ -1,12 +1,7 @@
 #!/usr/bin/python3
-
-
-"""
-Write an empty class Rectangle that defines a rectangle
-"""
+""" A module that define a class Rectangle"""
 
 
 class Rectangle:
-    """Creates a new class Rectangle"""
-
+    """Defines a class rectangle"""
     pass
