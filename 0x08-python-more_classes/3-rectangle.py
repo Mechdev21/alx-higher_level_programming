@@ -51,11 +51,10 @@ class Rectangle:
 
     def __str__(self):
         """returns a string representation"""
-        if self.__width == 0 or self.__height == 0:
-            return (" ")
-        else:
-            rect = ""
-            for i in range(self.__height):
-                rect += "#" * self.__width + "\n"
-            return rect
-
+        total = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                total += "#"
+            if self.__width != 0 and i < (self.__height - 1):
+                total += "\n"
+        return (total)
