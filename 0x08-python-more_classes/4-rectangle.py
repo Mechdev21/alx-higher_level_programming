@@ -27,7 +27,7 @@ class Rectangle:
     def height(self):
         """width getter method"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """defines the height setter method"""
@@ -61,4 +61,4 @@ class Rectangle:
 
     def __repr__(self):
         """representation of tghe rectangle"""
-        return ("Rectangle({},{})".format(self.__width, self.__height))
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
