@@ -31,7 +31,7 @@ class Rectangle(Base):
     def height(self):
         """height getter method"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """setter method for height"""
@@ -55,7 +55,7 @@ class Rectangle(Base):
             raise ValueError("x must be >= 0")
         self.__x = value
 
-    @property      
+    @property
     def y(self):
         """y getter method"""
         return self.__y
@@ -80,12 +80,13 @@ class Rectangle(Base):
         for i in range(self.__height):
             print(" " * self.__x, end="")
             for j in range(self.__width):
-                    print("#", end="")
+                print("#", end="")
             print("")
 
     def __str__(self):
         """returns the string magic method"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
         """assigns a value to each attributes"""
