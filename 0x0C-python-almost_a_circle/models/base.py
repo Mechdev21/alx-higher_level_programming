@@ -24,7 +24,7 @@ class Base:
         jstring = json.dumps(list_dictionaries)
         return jstring
 
-     @staticmethod
+    @staticmethod
     def from_json_string(json_string):
         '''Unjsonifies a dictionary.'''
         if json_string is None or not json_string:
