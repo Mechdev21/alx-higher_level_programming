@@ -1,12 +1,7 @@
 #!/usr/bin/node
-
-let i = 2;
-
-if (process.argv.length < 3) {
+const para = process.argv[2];
+if (para === undefined) {
   console.log('No argument');
 } else {
-  while (i < process.argv.length) {
-    console.log(process.argv[i]);
-    i++;
-  }
+  console.log(para);
 }
