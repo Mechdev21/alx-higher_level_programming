@@ -1,19 +1,20 @@
 #!/usr/bin/python3
+"""0x0F. Python - Object-relational mapping - task 6. First state model
 """
-Write a python file that contains the class definition
-of a State and an instance Base = declarative_base()
-"""
-from SQLAlchemy.ext.declarative import declarative_base
-from SQLAlchemy import Table, Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-class State(Base):
-    """
-    this state class inherits from Base
-    """
 
-    __tablename__ = "state"
-    id = Column(Integer, nullable=False, priamary_key=True,
-            autoincreament=True, unique=True)
+class State(Base):
+    """Defines ORM class for table `states`, with 2 columns:
+
+       `id` (sqlalchemy.Column): unique identifier, primary key
+       `name` (sqlalchemy.Column): name of state
+
+    """
+    __tablename__ = 'states'
+    id = Column(Integer, autoincrement=True, unique=True,
+                nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
